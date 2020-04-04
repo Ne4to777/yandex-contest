@@ -6,17 +6,16 @@ const rl = require('readline').createInterface({
 
 let length
 let lineIndex = 0
-const sequences = []
+let max = 0
 let current = 0
 const read = line => {
 	if (lineIndex) {
 		if (lineIndex > length) {
 			rl.close()
-		} else if (line === '1') {
-			if (!sequences[current]) sequences[current] = 0
-			sequences[current] += 1
 		} else {
-			current += 1
+			if (line === '1') current += 1
+			if (current > max) max = current
+			if (line !== '1') current = 0
 		}
 	} else {
 		length = parseInt(line, 0)
@@ -27,8 +26,7 @@ const read = line => {
 
 
 const close = () => {
-	const result = sequences.reduce((acc, el) => acc > el ? acc : el, 0)
-	fs.writeFileSync(`${__dirname}/output.txt`, result)
+	fs.writeFileSync(`${__dirname}/output.txt`, max)
 }
 
 rl
