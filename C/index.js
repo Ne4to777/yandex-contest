@@ -27,7 +27,6 @@ const read = line => {
 const close = () => {
 	fs.writeFileSync(`${__dirname}/output.txt`, buffer.slice(0, buffer.indexOf(0x00)))
 	// logMemoryDump()
-	process.exit(0)
 }
 
 rl
