@@ -1,0 +1,20 @@
+{
+  "name": "yandex-contest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "c": "node C",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ne4to777/yandex-contest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ne4to777/yandex-contest/issues"
+  },
+  "homepage": "https://github.com/Ne4to777/yandex-contest#readme"
+}
