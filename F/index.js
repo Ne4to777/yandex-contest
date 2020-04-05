@@ -16,16 +16,11 @@ const read = line => {
 			const startAt = line.indexOf(' ')
 			if (startAt > 0) {
 				let char = ''
-				let isFirst = true
-				for (let i = startAt; i < line.length; i += 1) {
+				for (let i = startAt + 1; i < line.length; i += 1) {
 					const el = line.charAt(i)
 					if (el === ' ') {
-						if (isFirst) {
-							isFirst = false
-						} else {
-							if (!aggregator[char]) aggregator[char] = 0
-							aggregator[char] += 1
-						}
+						if (!aggregator[char]) aggregator[char] = 0
+						aggregator[char] += 1
 						char = ''
 					} else {
 						char += el
