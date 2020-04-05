@@ -4,7 +4,7 @@ const rl = require('readline').createInterface({
 	input: fs.createReadStream(`${__dirname}/input.txt`)
 })
 
-const buffer = Buffer.alloc(7000000)
+const buffer = Buffer.alloc(1400000)
 let position = 0
 
 const read = line => {
