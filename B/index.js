@@ -12,10 +12,11 @@ const read = line => {
 	if (lineIndex) {
 		if (lineIndex > length) {
 			rl.close()
-		} else {
-			if (line === '1') current += 1
+		} else if (line === 1) {
+			current += 1
 			if (current > max) max = current
-			if (line !== '1') current = 0
+		} else {
+			current = 0
 		}
 	} else {
 		length = parseInt(line, 0)
